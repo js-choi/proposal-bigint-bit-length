@@ -6,9 +6,7 @@ ECMAScript Stage-0 Proposal. J. S. Choi, 2021.
 
 [specification]: http://jschoi.org/21/es-bigint-math/
 
-## Description
-(A [formal draft specification][specification] is available.)
-
+## Problem space
 BigInts are important for a myriad of
 mathematical, financial, scientific, and timing applications
 (such as in the [Node.js `process.hrtime.bigint` API][hrtime]),
@@ -42,7 +40,7 @@ directions for the API’s design. We would also examine cross-cutting concerns
 with other language features both standardized and proposed, such as the
 [BigInt Math proposal][].
 
-## Description
+## Solution
 The solution would probably be a computed property or method on the
 BigInt.prototype object or a static function on the BigInt constructor –
 something like one of the following:
