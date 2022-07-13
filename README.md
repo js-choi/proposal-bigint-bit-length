@@ -40,7 +40,7 @@ directions for the API’s design. We would also examine cross-cutting concerns
 with other language features both standardized and proposed, such as the
 [BigInt Math proposal][].
 
-## Solution
+## Potential solutions
 The solution would probably be a computed property or method on the
 BigInt.prototype object or a static function on the BigInt constructor –
 something like one of the following:
