@@ -27,6 +27,7 @@ property/method APIs:
 * [Java’s BigInteger bitLength method](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/math/BigInteger.html#bitLength())
 * [Dart’s BigInt bigLength property](https://api.dart.dev/stable/2.17.6/dart-core/BigInt/bitLength.html)
 * [.NET’s BigInteger GetBitLength method](https://docs.microsoft.com/en-us/dotnet/api/system.numerics.biginteger.getbitlength?view=net-6.0#system-numerics-biginteger-getbitlength)
+* [Python’s `int.bit_length()` method](https://docs.python.org/3/library/stdtypes.html#int.bit_length
 
 In JavaScript, we currently have to [use `.toString` to count the BigInts’
 digits][toString]. This is weird and inefficient for such a fundamental
@@ -46,7 +47,7 @@ BigInt.prototype object or a static function on the BigInt constructor –
 something like one of the following:
 
 ```js
-(0n).bitLength // Like in Dart.
+(0n).bitLength // Like in Dart and Python.
 (0n).bitLength() // Like in Java.
 (0n).getBitLength() // Like in .NET.
 BigInt.bitLength(0n)
