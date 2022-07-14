@@ -24,10 +24,17 @@ and cube roots of BigInts.
 In other languages, BigInt bit lengths are provided by convenient
 property/method APIs:
 
-* [Java’s BigInteger bitLength method](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/math/BigInteger.html#bitLength())
-* [Dart’s BigInt bigLength property](https://api.dart.dev/stable/2.17.6/dart-core/BigInt/bitLength.html)
-* [.NET’s BigInteger GetBitLength method](https://docs.microsoft.com/en-us/dotnet/api/system.numerics.biginteger.getbitlength?view=net-6.0#system-numerics-biginteger-getbitlength)
-* [Python’s `int.bit_length()` method](https://docs.python.org/3/library/stdtypes.html#int.bit_length)
+| Precedent      | Form                         | Negative-int behavior               | Return type                         |
+| -------------- | ---------------------------- | ----------------------------------- | ----------------------------------- |
+| **[Python][]** | `i.bit_length()`             | Absolute value of input             | Bignum integer                      |
+| **[Java][]**   | `i.bitLength()`              | Two’s complement excluding sign bit | 32-bit signed integer               |
+| **[.NET][]**   | `BigInteger.GetBitLength(i)` | Two’s complement excluding sign bit | 64-bit signed integer               |
+| **[Dart][]**   | `i.bitLength`                | Two’s complement excluding sign bit | `int` type (width depends on build) |
+
+[Python]: https://docs.python.org/3/library/stdtypes.html#int.bit_length
+[Java]: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/math/BigInteger.html#bitLength()
+[.NET]: https://docs.microsoft.com/en-us/dotnet/api/system.numerics.biginteger.getbitlength?view=net-6.0#system-numerics-biginteger-getbitlength
+[Dart]: https://api.dart.dev/stable/2.17.6/dart-core/BigInt/bitLength.html
 
 In JavaScript, we currently have to [use `.toString` to count the BigInts’
 digits][toString]. This is weird and inefficient for such a fundamental
