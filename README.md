@@ -24,17 +24,23 @@ and cube roots of BigInts.
 In other languages, BigInt bit lengths are provided by convenient
 property/method APIs:
 
-| Precedent      | Form                         | Negative-int behavior          | Return type                         |
-| -------------- | ---------------------------- | ------------------------------ | ----------------------------------- |
-| **[Python][]** | `i.bit_length()`             | Absolute value of input        | Bignum integer                      |
-| **[Java][]**   | `i.bitLength()`              | Two’s complement sans sign bit | 32-bit signed integer               |
-| **[.NET][]**   | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit | 64-bit signed integer               |
-| **[Dart][]**   | `i.bitLength`                | Two’s complement sans sign bit | `int` type (width depends on build) |
+| Precedent       | Form                         | Negative-int behavior                            | Return type                         |
+| --------------- | ---------------------------- | ------------------------------------------------ | ----------------------------------- |
+| **[Python][]**  | `i.bit_length()`             | Absolute value of input                          | Bignum integer                      |
+| **[Java][]**    | `i.bitLength()`              | Two’s complement sans sign bit                   | 32-bit signed integer               |
+| **[.NET][]**    | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit                   | 64-bit signed integer               |
+| **[Dart][]**    | `i.bitLength`                | Two’s complement sans sign bit                   | 32- or 64-bit signed integer*       |
+| **[Wolfram][]** | `BitLength[i]`               | Absolute value of input − 1 (only when negative) | Bignum integer                      |
+| **[GNP][]**     | `mpz_sizeinbase(i, 2)`       | Absolute value of input                          | 32-bit signed integer               |
+
+\* In Dart, the width of the return type depends on the device’s CPU.
 
 [Python]: https://docs.python.org/3/library/stdtypes.html#int.bit_length
 [Java]: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/math/BigInteger.html#bitLength()
 [.NET]: https://docs.microsoft.com/en-us/dotnet/api/system.numerics.biginteger.getbitlength?view=net-6.0#system-numerics-biginteger-getbitlength
 [Dart]: https://api.dart.dev/stable/2.17.6/dart-core/BigInt/bitLength.html
+[Wolfram]: https://reference.wolfram.com/language/ref/BitLength.html
+[GNP]: https://gmplib.org/manual/Miscellaneous-Integer-Functions
 
 In JavaScript, we currently have to [use `.toString` to count the BigInts’
 digits][toString]. This is weird and inefficient for such a fundamental
