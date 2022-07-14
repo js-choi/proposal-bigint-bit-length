@@ -74,3 +74,4 @@ BigInts and not on ordinary numbers. We therefore are not considering adding it
 to the Math object.
 
 [BigInt Math proposal]: https://github.com/tc39/proposal-bigint-math
+[already capped]: https://github.com/tc39/proposal-bigint-math/issues/21#issuecomment-1180917488
