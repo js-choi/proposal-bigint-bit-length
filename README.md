@@ -1,4 +1,4 @@
-# BigInt `Math` for JavaScript
+# BigInt bit length for JavaScript
 ECMAScript Stage-0 Proposal. J. S. Choi, 2021.
 
 * **[Specification][]**
