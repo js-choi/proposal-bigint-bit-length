@@ -72,3 +72,5 @@ In contrast to other operations – such as `abs` and `sqrt` from the [BigInt
 Math proposal][] – the new bit-length API would probably be useful only on
 BigInts and not on ordinary numbers. We therefore are not considering adding it
 to the Math object.
+
+[BigInt Math proposal]: https://github.com/tc39/proposal-bigint-math
