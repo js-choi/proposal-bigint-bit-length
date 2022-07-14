@@ -84,3 +84,5 @@ to the Math object. (But see [issue #4][] for more discussion.)
 [BigInt Math proposal]: https://github.com/tc39/proposal-bigint-math
 [already capped]: https://github.com/tc39/proposal-bigint-math/issues/21#issuecomment-1180917488
 [issue #2]: https://github.com/js-choi/proposal-bigint-bit-length/issues/2
+[issue #3]: https://github.com/js-choi/proposal-bigint-bit-length/issues/3
+[issue #4]: https://github.com/js-choi/proposal-bigint-bit-length/issues/4
