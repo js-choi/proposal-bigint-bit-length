@@ -24,14 +24,14 @@ and cube roots of BigInts.
 In other languages, BigInt bit lengths are provided by convenient
 property/method APIs:
 
-| Precedent       | Form                         | Negative-int behavior                            | Return type                         |
-| --------------- | ---------------------------- | ------------------------------------------------ | ----------------------------------- |
-| **[Python][]**  | `i.bit_length()`             | Absolute value of input                          | Bignum integer                      |
-| **[Java][]**    | `i.bitLength()`              | Two’s complement sans sign bit                   | 32-bit signed integer               |
-| **[.NET][]**    | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit                   | 64-bit signed integer               |
-| **[Dart][]**    | `i.bitLength`                | Two’s complement sans sign bit                   | 32- or 64-bit signed integer*       |
-| **[Wolfram][]** | `BitLength[i]`               | Absolute value of input − 1 (only when negative) | Bignum integer                      |
-| **[GNP][]**     | `mpz_sizeinbase(i, 2)`       | Absolute value of input                          | 32-bit signed integer               |
+| Precedent       | Form                         | Negative-int behavior          | Return type                   |
+| --------------- | ---------------------------- | ------------------------------ | ----------------------------- |
+| **[Python][]**  | `i.bit_length()`             | Absolute value of input        | Bignum integer                |
+| **[Java][]**    | `i.bitLength()`              | Two’s complement sans sign bit | 32-bit signed integer         |
+| **[.NET][]**    | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit | 64-bit signed integer         |
+| **[Dart][]**    | `i.bitLength`                | Two’s complement sans sign bit | 32- or 64-bit signed integer* |
+| **[Wolfram][]** | `BitLength[i]`               | Two’s complement sans sign bit | Bignum integer                |
+| **[GNP][]**     | `mpz_sizeinbase(i, 2)`       | Absolute value of input        | 32-bit signed integer         |
 
 \* In Dart, the width of the return type depends on the device’s CPU.
 
