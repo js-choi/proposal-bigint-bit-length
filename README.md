@@ -64,7 +64,7 @@ Number if we are fine with limiting BigInts to be less than `2n **
 BigInt(Number.MAX_SAFE_INTEGER)`. (In practice, this already happens; [V8
 already caps BigInts to no more than `1<<30` bits, and Firefox already caps at
 about `1<<20` bits][already capped]. The question thus is whether such a limit
-should be enshrined in the specification.)
+should be enshrined in the specification. See [issue #2][].)
 
 [Waldemar Horwat’s integer-roots]: https://github.com/waldemarhorwat/integer-roots
 
@@ -75,3 +75,4 @@ to the Math object.
 
 [BigInt Math proposal]: https://github.com/tc39/proposal-bigint-math
 [already capped]: https://github.com/tc39/proposal-bigint-math/issues/21#issuecomment-1180917488
+[issue #2]: https://github.com/js-choi/proposal-bigint-bit-length/issues/2
