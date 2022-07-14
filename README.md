@@ -61,11 +61,11 @@ BigInt.bitLength(0n)
 BigInt.getBitLength(0n) // Like in .NET.
 ```
 
-It would return the number of bits in the minimal two’s-complement
+It would probably return the number of bits in the minimal two’s-complement
 representation of any input BigInt, excluding the sign bit. For positive
 BigInts, this is equivalent to the number of bits in their ordinary binary
 representations. This is also roughly equivalent to `ceil(log2(value < 0 ?
--value : value + 1))`.
+-value : value + 1))`. (See [issue #3][] for discussion about other options.)
 
 The resulting bit length might also be a BigInt, or it might be an ordinary
 Number if we are fine with limiting BigInts to be less than `2n **
@@ -78,8 +78,8 @@ should be enshrined in the specification. See [issue #2][].)
 
 In contrast to other operations – such as `abs` and `sqrt` from the [BigInt
 Math proposal][] – the new bit-length API would probably be useful only on
-BigInts and not on ordinary numbers. We therefore are not considering adding it
-to the Math object.
+BigInts and not on ordinary numbers. We therefore are not plannign to add it
+to the Math object. (But see [issue #4][] for more discussion.)
 
 [BigInt Math proposal]: https://github.com/tc39/proposal-bigint-math
 [already capped]: https://github.com/tc39/proposal-bigint-math/issues/21#issuecomment-1180917488
