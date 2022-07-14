@@ -31,7 +31,7 @@ property/method APIs:
 | **[.NET][]**    | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit | 64-bit signed integer         |
 | **[Dart][]**    | `i.bitLength`                | Two’s complement sans sign bit | 32- or 64-bit signed integer* |
 | **[Wolfram][]** | `BitLength[i]`               | Two’s complement sans sign bit | Bignum integer                |
-| **[GNP][]**     | `mpz_sizeinbase(i, 2)`       | Absolute value of input        | 32-bit signed integer         |
+| **[GNP][]**     | `mpz_sizeinbase(i, 2)`       | Absolute value of input        | ≥16-bit signed integer        |
 
 \* In Dart, the width of the return type depends on the device’s CPU.
 
