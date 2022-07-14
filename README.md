@@ -24,12 +24,12 @@ and cube roots of BigInts.
 In other languages, BigInt bit lengths are provided by convenient
 property/method APIs:
 
-| Precedent      | Form                         | Negative-int behavior               | Return type                         |
-| -------------- | ---------------------------- | ----------------------------------- | ----------------------------------- |
-| **[Python][]** | `i.bit_length()`             | Absolute value of input             | Bignum integer                      |
-| **[Java][]**   | `i.bitLength()`              | Two’s complement excluding sign bit | 32-bit signed integer               |
-| **[.NET][]**   | `BigInteger.GetBitLength(i)` | Two’s complement excluding sign bit | 64-bit signed integer               |
-| **[Dart][]**   | `i.bitLength`                | Two’s complement excluding sign bit | `int` type (width depends on build) |
+| Precedent      | Form                         | Negative-int behavior          | Return type                         |
+| -------------- | ---------------------------- | ------------------------------ | ----------------------------------- |
+| **[Python][]** | `i.bit_length()`             | Absolute value of input        | Bignum integer                      |
+| **[Java][]**   | `i.bitLength()`              | Two’s complement sans sign bit | 32-bit signed integer               |
+| **[.NET][]**   | `BigInteger.GetBitLength(i)` | Two’s complement sans sign bit | 64-bit signed integer               |
+| **[Dart][]**   | `i.bitLength`                | Two’s complement sans sign bit | `int` type (width depends on build) |
 
 [Python]: https://docs.python.org/3/library/stdtypes.html#int.bit_length
 [Java]: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/math/BigInteger.html#bitLength()
