@@ -54,9 +54,9 @@ BigInt.getBitLength(0n)
 ```
 
 It would return the number of bits in the minimal two’s-complement
-representation of the BigInteger, excluding any sign bit. For positive
-BigIntegers, this is equivalent to the number of bits in the ordinary binary
-representation. This is also roughly equivalent to `ceil(log2(value < 0 ?
+representation of any input BigInt, excluding the sign bit. For positive
+BigInts, this is equivalent to the number of bits in their ordinary binary
+representations. This is also roughly equivalent to `ceil(log2(value < 0 ?
 -value : value + 1))`.
 
 The resulting bit length might also be a BigInt, or it might be an ordinary
