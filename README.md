@@ -49,9 +49,9 @@ something like one of the following:
 ```js
 (0n).bitLength // Like in Dart and Python.
 (0n).bitLength() // Like in Java.
-(0n).getBitLength() // Like in .NET.
+(0n).getBitLength()
 BigInt.bitLength(0n)
-BigInt.getBitLength(0n)
+BigInt.getBitLength(0n) // Like in .NET.
 ```
 
 It would return the number of bits in the minimal two’s-complement
